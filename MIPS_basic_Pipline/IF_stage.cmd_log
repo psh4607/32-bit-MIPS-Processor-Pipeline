@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/basic_pipline/IF_stage.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/basic_pipline/IF_stage.syr" 

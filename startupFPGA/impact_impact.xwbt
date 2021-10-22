@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\HO_win7\Documents\FPGA\startupFPGA\impact.xsl
+OUTFILE=C:\Users\HO_win7\Documents\FPGA\startupFPGA\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\HO_win7\Documents\FPGA\startupFPGA
+LICENSE=iMPACT
+USER_INFO=iMPACT

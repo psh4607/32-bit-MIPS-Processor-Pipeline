@@ -1,0 +1,247 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml memory.twx memory.ncd -o memory.twr memory.pcf
+
+Design file:              memory.ncd
+Physical constraint file: memory.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock MemRead
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                               | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)              | Phase  |
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+MemAddr<2>    |    5.841(F)|      SLOW  |    1.905(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    9.729(F)|      SLOW  |    1.071(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<3>    |    6.612(F)|      SLOW  |    1.896(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    9.797(F)|      SLOW  |    1.211(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<4>    |    6.576(F)|      SLOW  |    2.517(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    6.199(F)|      SLOW  |    1.659(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<5>    |    4.978(F)|      SLOW  |    2.170(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    6.058(F)|      SLOW  |    1.936(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<6>    |    6.980(F)|      SLOW  |    1.887(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    4.100(F)|      SLOW  |    1.855(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<7>    |    6.924(F)|      SLOW  |    1.934(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    3.616(F)|      SLOW  |    1.918(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<8>    |    5.155(F)|      SLOW  |    1.909(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    3.524(F)|      SLOW  |    2.002(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Write_Data<0> |    0.256(F)|      SLOW  |    4.642(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<1> |    0.099(F)|      FAST  |    4.566(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<2> |   -0.318(F)|      FAST  |    4.708(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<3> |    0.194(F)|      FAST  |    4.730(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<4> |    1.008(F)|      SLOW  |    3.632(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<5> |    1.086(F)|      SLOW  |    3.702(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<6> |    0.295(F)|      SLOW  |    3.514(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<7> |    0.472(F)|      FAST  |    3.624(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<8> |    0.651(F)|      FAST  |    4.621(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<9> |    0.878(F)|      SLOW  |    4.549(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<10>|    3.397(F)|      SLOW  |    4.709(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<11>|    3.046(F)|      SLOW  |    4.541(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<12>|    3.789(F)|      SLOW  |    2.156(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<13>|    4.656(F)|      SLOW  |    2.038(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<14>|    2.409(F)|      SLOW  |    1.231(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<15>|    2.471(F)|      SLOW  |    1.698(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<16>|    3.234(F)|      SLOW  |    1.157(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<17>|    2.926(F)|      SLOW  |    1.511(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<18>|    3.730(F)|      SLOW  |    0.543(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<19>|    4.100(F)|      SLOW  |    0.864(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<20>|    4.929(F)|      SLOW  |    2.760(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<21>|    4.691(F)|      SLOW  |    3.095(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<22>|    5.620(F)|      SLOW  |    2.576(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<23>|    4.836(F)|      SLOW  |    2.665(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<24>|    1.391(F)|      SLOW  |    4.692(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<25>|    1.996(F)|      SLOW  |    4.748(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<26>|    1.485(F)|      SLOW  |    4.381(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<27>|    1.536(F)|      SLOW  |    4.725(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<28>|    4.137(F)|      SLOW  |    3.842(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<29>|    4.960(F)|      SLOW  |    3.976(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<30>|    3.965(F)|      SLOW  |    3.671(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<31>|    4.782(F)|      SLOW  |    3.986(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+
+Setup/Hold to clock MemWrite
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+              |Max Setup to|  Process   |Max Hold to |  Process   |                               | Clock  |
+Source        | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)              | Phase  |
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+MemAddr<2>    |    6.444(F)|      SLOW  |    1.273(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |   10.332(F)|      SLOW  |    0.439(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<3>    |    7.215(F)|      SLOW  |    1.264(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |   10.400(F)|      SLOW  |    0.579(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<4>    |    7.179(F)|      SLOW  |    1.885(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    6.802(F)|      SLOW  |    1.027(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<5>    |    5.581(F)|      SLOW  |    1.538(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    6.661(F)|      SLOW  |    1.304(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<6>    |    7.583(F)|      SLOW  |    1.255(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    4.703(F)|      SLOW  |    1.223(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<7>    |    7.527(F)|      SLOW  |    1.302(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    4.219(F)|      SLOW  |    1.286(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+MemAddr<8>    |    5.758(F)|      SLOW  |    1.277(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+              |    4.127(F)|      SLOW  |    1.370(F)|      SLOW  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Write_Data<0> |    0.859(F)|      SLOW  |    4.010(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<1> |    0.583(F)|      SLOW  |    3.934(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<2> |    0.067(F)|      FAST  |    4.076(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<3> |    0.777(F)|      SLOW  |    4.098(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<4> |    1.611(F)|      SLOW  |    3.000(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<5> |    1.689(F)|      SLOW  |    3.070(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<6> |    0.898(F)|      SLOW  |    2.882(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<7> |    1.009(F)|      SLOW  |    2.992(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<8> |    1.232(F)|      SLOW  |    3.989(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<9> |    1.481(F)|      SLOW  |    3.917(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<10>|    4.000(F)|      SLOW  |    4.077(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<11>|    3.649(F)|      SLOW  |    3.909(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<12>|    4.392(F)|      SLOW  |    1.524(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<13>|    5.259(F)|      SLOW  |    1.406(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<14>|    3.012(F)|      SLOW  |    0.599(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<15>|    3.074(F)|      SLOW  |    1.066(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<16>|    3.837(F)|      SLOW  |    0.525(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<17>|    3.529(F)|      SLOW  |    0.879(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<18>|    4.333(F)|      SLOW  |   -0.089(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<19>|    4.703(F)|      SLOW  |    0.232(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<20>|    5.532(F)|      SLOW  |    2.128(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<21>|    5.294(F)|      SLOW  |    2.463(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<22>|    6.223(F)|      SLOW  |    1.944(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<23>|    5.439(F)|      SLOW  |    2.033(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<24>|    1.994(F)|      SLOW  |    4.060(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<25>|    2.599(F)|      SLOW  |    4.116(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<26>|    2.088(F)|      SLOW  |    3.749(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<27>|    2.139(F)|      SLOW  |    4.093(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<28>|    4.740(F)|      SLOW  |    3.210(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<29>|    5.563(F)|      SLOW  |    3.344(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<30>|    4.568(F)|      SLOW  |    3.039(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+Write_Data<31>|    5.385(F)|      SLOW  |    3.354(F)|      SLOW  |GND_1_o_GND_1_o_AND_1_o_BUFG   |   0.000|
+--------------+------------+------------+------------+------------+-------------------------------+--------+
+
+Clock MemRead to Pad
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                               | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)              | Phase  |
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+Read_Data<0> |        11.902(F)|      SLOW  |         5.197(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<1> |        11.959(F)|      SLOW  |         5.254(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<2> |        11.903(F)|      SLOW  |         5.198(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<3> |        11.903(F)|      SLOW  |         5.198(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<4> |        11.898(F)|      SLOW  |         5.193(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<5> |        11.893(F)|      SLOW  |         5.188(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<6> |        11.906(F)|      SLOW  |         5.201(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<7> |        11.893(F)|      SLOW  |         5.188(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<8> |        11.898(F)|      SLOW  |         5.193(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<9> |        11.906(F)|      SLOW  |         5.201(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<10>|        11.906(F)|      SLOW  |         5.201(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<11>|        11.906(F)|      SLOW  |         5.201(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<12>|        11.900(F)|      SLOW  |         5.195(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<13>|        11.900(F)|      SLOW  |         5.195(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<14>|        11.965(F)|      SLOW  |         5.260(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<15>|        11.965(F)|      SLOW  |         5.260(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<16>|        12.005(F)|      SLOW  |         5.300(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<17>|        12.005(F)|      SLOW  |         5.300(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<18>|        12.004(F)|      SLOW  |         5.299(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<19>|        12.004(F)|      SLOW  |         5.299(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<20>|        11.944(F)|      SLOW  |         5.239(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<21>|        11.944(F)|      SLOW  |         5.239(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<22>|        11.940(F)|      SLOW  |         5.235(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<23>|        11.940(F)|      SLOW  |         5.235(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<24>|        11.999(F)|      SLOW  |         5.294(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<25>|        12.002(F)|      SLOW  |         5.297(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<26>|        12.002(F)|      SLOW  |         5.297(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<27>|        11.999(F)|      SLOW  |         5.294(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<28>|        11.945(F)|      SLOW  |         5.240(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<29>|        11.945(F)|      SLOW  |         5.240(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<30>|        11.945(F)|      SLOW  |         5.240(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<31>|        11.945(F)|      SLOW  |         5.240(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+
+Clock MemWrite to Pad
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                               | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)              | Phase  |
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+Read_Data<0> |        11.270(F)|      SLOW  |         4.812(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<1> |        11.327(F)|      SLOW  |         4.869(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<2> |        11.271(F)|      SLOW  |         4.813(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<3> |        11.271(F)|      SLOW  |         4.813(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<4> |        11.266(F)|      SLOW  |         4.808(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<5> |        11.261(F)|      SLOW  |         4.803(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<6> |        11.274(F)|      SLOW  |         4.816(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<7> |        11.261(F)|      SLOW  |         4.803(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<8> |        11.266(F)|      SLOW  |         4.808(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<9> |        11.274(F)|      SLOW  |         4.816(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<10>|        11.274(F)|      SLOW  |         4.816(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<11>|        11.274(F)|      SLOW  |         4.816(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<12>|        11.268(F)|      SLOW  |         4.810(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<13>|        11.268(F)|      SLOW  |         4.810(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<14>|        11.333(F)|      SLOW  |         4.875(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<15>|        11.333(F)|      SLOW  |         4.875(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<16>|        11.373(F)|      SLOW  |         4.915(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<17>|        11.373(F)|      SLOW  |         4.915(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<18>|        11.372(F)|      SLOW  |         4.914(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<19>|        11.372(F)|      SLOW  |         4.914(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<20>|        11.312(F)|      SLOW  |         4.854(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<21>|        11.312(F)|      SLOW  |         4.854(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<22>|        11.308(F)|      SLOW  |         4.850(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<23>|        11.308(F)|      SLOW  |         4.850(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<24>|        11.367(F)|      SLOW  |         4.909(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<25>|        11.370(F)|      SLOW  |         4.912(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<26>|        11.370(F)|      SLOW  |         4.912(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<27>|        11.367(F)|      SLOW  |         4.909(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<28>|        11.313(F)|      SLOW  |         4.855(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<29>|        11.313(F)|      SLOW  |         4.855(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<30>|        11.313(F)|      SLOW  |         4.855(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+Read_Data<31>|        11.313(F)|      SLOW  |         4.855(F)|      FAST  |GND_1_o_GND_1_o_AND_4353_o_BUFG|   0.000|
+-------------+-----------------+------------+-----------------+------------+-------------------------------+--------+
+
+Clock to Setup on destination clock MemRead
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+MemRead        |         |         |         |    9.437|
+MemWrite       |         |         |         |    9.437|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock MemWrite
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+MemRead        |         |         |         |    9.437|
+MemWrite       |         |         |         |    9.437|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Thu May 20 14:02:09 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 287 MB
+
+
+

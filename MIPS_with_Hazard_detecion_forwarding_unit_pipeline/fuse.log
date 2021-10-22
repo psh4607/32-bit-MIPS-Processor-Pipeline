@@ -1,0 +1,46 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/tb_pipeline_MIPS_32bit_isim_beh.exe -prj C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/tb_pipeline_MIPS_32bit_beh.prj work.tb_pipeline_MIPS_32bit work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../memory_advanced.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../flipflop.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../alu_advanced.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../stages_advanced.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/clock_div.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../pipeline_advanced.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/../tb_pipeline.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module clock_divider
+Compiling module MUX_21
+Compiling module PC_register
+Compiling module inst_memory
+Compiling module IFstage_default
+Compiling module flipflop_IFID
+Compiling module IFIDstage_default
+Compiling module control_unit
+Compiling module hazard_detection
+Compiling module IDstage_default
+Compiling module flipflop
+Compiling module IDEXEStage_default
+Compiling module MUX_41
+Compiling module alu_control
+Compiling module alu
+Compiling module forwarding_unit
+Compiling module EXEStage_default
+Compiling module EXEMEMStage_default
+Compiling module data_memory
+Compiling module MEMStage
+Compiling module MEMWBstage_default
+Compiling module WBstage_default
+Compiling module pipeline
+Compiling module tb_pipeline_MIPS_32bit
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 16 sub-compilation(s) to finish...
+Compiled 25 Verilog Units
+Built simulation executable C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/tb_pipeline_MIPS_32bit_isim_beh.exe
+Fuse Memory Usage: 30256 KB
+Fuse CPU Usage: 1781 ms

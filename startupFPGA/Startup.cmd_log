@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/startupFPGA/Startup.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/startupFPGA/Startup.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/HO_win7/Desktop/Resources (1)/Source Codes/1.Startup/Startup.ucf" -p xc6slx9-tqg144-2 Startup.ngc Startup.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Startup_map.ncd Startup.ngd Startup.pcf 
+par -w -intstyle ise -ol high -mt off Startup_map.ncd Startup.ncd Startup.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml Startup.twx Startup.ncd -o Startup.twr Startup.pcf 
+bitgen -intstyle ise -f Startup.ut Startup.ncd 
+bitgen -intstyle ise -f Startup.ut Startup.ncd 

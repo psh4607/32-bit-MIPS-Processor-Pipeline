@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="subject2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="fourbitAdder_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fourbitAdder_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_fourbitAdder_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_fourbitAdder_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_fourbitAdder_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_fourbitAdder_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1620319714" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1620319714">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320010" xil_pn:in_ck="4567030216965607440" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1620320010">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="counter.v"/>
+      <outfile xil_pn:name="fourbitAdder.v"/>
+      <outfile xil_pn:name="mux41_case.v"/>
+      <outfile xil_pn:name="mux41_conop.v"/>
+      <outfile xil_pn:name="mux41_if.v"/>
+      <outfile xil_pn:name="onebitAdder.v"/>
+      <outfile xil_pn:name="tb2_mux41_if.v"/>
+      <outfile xil_pn:name="tb_counter.v"/>
+      <outfile xil_pn:name="tb_fourbitAdder.v"/>
+      <outfile xil_pn:name="tb_mux41_case.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320014" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7152770792714661671" xil_pn:start_ts="1620320014">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320014" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7511760975570832155" xil_pn:start_ts="1620320014">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1620319714" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2875058881913127620" xil_pn:start_ts="1620319714">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320014" xil_pn:in_ck="4567030216965607440" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1620320014">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="counter.v"/>
+      <outfile xil_pn:name="fourbitAdder.v"/>
+      <outfile xil_pn:name="mux41_case.v"/>
+      <outfile xil_pn:name="mux41_conop.v"/>
+      <outfile xil_pn:name="mux41_if.v"/>
+      <outfile xil_pn:name="onebitAdder.v"/>
+      <outfile xil_pn:name="tb2_mux41_if.v"/>
+      <outfile xil_pn:name="tb_counter.v"/>
+      <outfile xil_pn:name="tb_fourbitAdder.v"/>
+      <outfile xil_pn:name="tb_mux41_case.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320017" xil_pn:in_ck="4567030216965607440" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7292380827295764429" xil_pn:start_ts="1620320014">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_fourbitAdder_beh.prj"/>
+      <outfile xil_pn:name="tb_fourbitAdder_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1620320017" xil_pn:in_ck="324995815192934185" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4167198846230954224" xil_pn:start_ts="1620320017">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="tb_fourbitAdder_isim_beh.wdb"/>
+    </transform>
+  </transforms>
+
+</generated_project>

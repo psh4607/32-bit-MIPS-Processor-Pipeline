@@ -1,0 +1,62 @@
+
+
+NET clock LOC = P55; # 50MHz clock
+NET reset LOC = P46; # reset switch
+#
+#NET "digit[3]" LOC = P87;
+#NET "digit[2]" LOC = P88;
+#NET "digit[1]" LOC = P92;
+#NET "digit[0]" LOC = P93;
+##
+#NET "fnd[7]" LOC = P102;
+#NET "fnd[6]" LOC = P101;
+#NET "fnd[5]" LOC = P100;
+#NET "fnd[4]" LOC = P99;
+#NET "fnd[3]" LOC = P98;
+#NET "fnd[2]" LOC = P97;
+#NET "fnd[1]" LOC = P95;
+#NET "fnd[0]" LOC = P94;
+
+NET result[15] LOC = P24; 
+NET result[14] LOC = P23;
+NET result[13] LOC = P22;
+NET result[12] LOC = P21;
+NET result[11] LOC = P17;
+NET result[10] LOC = P16;
+NET result[9] LOC = P15;
+NET result[8] LOC = P14;
+NET result[7] LOC = P12;
+NET result[6] LOC = P11;
+NET result[5] LOC = P10;
+NET result[4] LOC = P9;
+NET result[3] LOC = P8;
+NET result[2] LOC = P7;
+NET result[1] LOC = P6;
+NET result[0] LOC = P5;
+
+#NET "dipSwitch[5]" LOC = P46;
+#NET "dipSwitch[4]" LOC = P45;
+#NET "dipSwitch[3]" LOC = P44;
+#NET "dipSwitch[2]" LOC = P43;
+#NET "dipSwitch[1]" LOC = P41;
+
+#NET "keyLed[0]" LOC = P81;
+#NET "keyLed[1]" LOC = P82;
+#NET "keyLed[2]" LOC = P83;
+#NET "keyLed[3]" LOC = P84;
+#NET "keyLed[4]" LOC = P85;
+##
+#NET "key[0]" LOC = P74;
+#NET "key[1]" LOC = P75;
+#NET "key[2]" LOC = P78;
+#NET "key[3]" LOC = P79;
+#NET "key[4]" LOC = P80;
+##
+#NET "buzz" LOC = P2;
+#
+#NET "SCL" LOC = P29;
+#NET "SDA" LOC = P30;
+##
+#NET "TXD" LOC = P141;
+#NET "RXD" LOC = P140;
+#

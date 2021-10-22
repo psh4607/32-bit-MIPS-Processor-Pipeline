@@ -1,0 +1,55 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS_isim_beh.exe -prj C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS_beh.prj work.tb_MIPS work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/PC.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/Mux.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/Memory.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/instructionMemory.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/hazard_detection_unit.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/forwarding_unit.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/flipflop.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/Control_unit.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/ALU.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/Stages.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/Registers.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/clk.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/MIPS.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module clk_div
+Compiling module MUX_3
+Compiling module MUX
+Compiling module PC_reg
+Compiling module instruction_memory
+Compiling module IF_default
+Compiling module control_unit
+Compiling module hazard_detection
+Compiling module ID_default
+Compiling module ALU_Ctrl
+Compiling module ALU
+Compiling module forwarding_unit
+Compiling module EXE_default
+Compiling module data_memory
+Compiling module MEM
+Compiling module MUX_4
+Compiling module FF
+Compiling module MUX_33
+Compiling module WB_default
+Compiling module FFIFID
+Compiling module reg_IFID_default
+Compiling module reg_IDEXE_default
+Compiling module reg_EXEMEM_default
+Compiling module reg_MEMWB_default
+Compiling module MIPS
+Compiling module tb_MIPS
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 17 sub-compilation(s) to finish...
+Compiled 27 Verilog Units
+Built simulation executable C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS_isim_beh.exe
+Fuse Memory Usage: 30588 KB
+Fuse CPU Usage: 859 ms

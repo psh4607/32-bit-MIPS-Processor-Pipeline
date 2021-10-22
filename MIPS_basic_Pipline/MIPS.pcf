@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Jun 22 14:43:13 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rst" LOCATE = SITE "P1" LEVEL 1;
+COMP "cclk" LOCATE = SITE "P55" LEVEL 1;
+COMP "result<0>" LOCATE = SITE "P5" LEVEL 1;
+COMP "result<1>" LOCATE = SITE "P6" LEVEL 1;
+COMP "result<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "result<3>" LOCATE = SITE "P8" LEVEL 1;
+COMP "result<4>" LOCATE = SITE "P9" LEVEL 1;
+COMP "result<5>" LOCATE = SITE "P10" LEVEL 1;
+COMP "result<6>" LOCATE = SITE "P11" LEVEL 1;
+COMP "result<7>" LOCATE = SITE "P12" LEVEL 1;
+COMP "result<8>" LOCATE = SITE "P14" LEVEL 1;
+COMP "result<9>" LOCATE = SITE "P15" LEVEL 1;
+COMP "result<10>" LOCATE = SITE "P16" LEVEL 1;
+COMP "result<11>" LOCATE = SITE "P17" LEVEL 1;
+COMP "result<12>" LOCATE = SITE "P21" LEVEL 1;
+COMP "result<13>" LOCATE = SITE "P22" LEVEL 1;
+COMP "result<14>" LOCATE = SITE "P23" LEVEL 1;
+COMP "result<15>" LOCATE = SITE "P24" LEVEL 1;
+SCHEMATIC END;
+

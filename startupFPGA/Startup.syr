@@ -1,0 +1,719 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Startup.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Startup.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Startup"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : Startup
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\HO_win7\Desktop\Resources (1)\Source Codes\1.Startup\Startup.v" into library work
+Parsing module <Startup>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Startup>.
+WARNING:HDLCompiler:413 - "C:\Users\HO_win7\Desktop\Resources (1)\Source Codes\1.Startup\Startup.v" Line 72: Result of 26-bit expression is truncated to fit in 25-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\HO_win7\Desktop\Resources (1)\Source Codes\1.Startup\Startup.v" Line 140: Result of 10-bit expression is truncated to fit in 9-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Startup>.
+    Related source file is "C:\Users\HO_win7\Desktop\Resources (1)\Source Codes\1.Startup\Startup.v".
+        st_Init = 3'b100
+        st_BuzzOn = 3'b010
+        st_BuzzOff = 2'b01
+        CLOCKS_PER_BIT = 1302
+        CLOCKS_WAIT_FOR_RECEIVE = 651
+        MAX_TX_BIT_COUNT = 9
+        MAX_DATA_BUFFER_INDEX = 10
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <data_buffer>, simulation mismatch.
+    Found 10x8-bit dual-port RAM <Mram_data_buffer> for signal <data_buffer>.
+    Found 5-bit register for signal <keyLed>.
+    Found 16-bit register for signal <led>.
+    Found 2-bit register for signal <digit_sel>.
+    Found 4-bit register for signal <digit>.
+    Found 4-bit register for signal <number>.
+    Found 3-bit register for signal <state>.
+    Found 25-bit register for signal <counter>.
+    Found 1-bit register for signal <buzz>.
+    Found 9-bit register for signal <alert_num>.
+    Found 3-bit register for signal <reset_cnt>.
+    Found 1-bit register for signal <reset_new>.
+    Found 11-bit register for signal <tx_clk_count>.
+    Found 4-bit register for signal <tx_bit_count>.
+    Found 1-bit register for signal <TXD>.
+    Found 4-bit register for signal <data_buffer_index>.
+    Found 8-bit register for signal <data_tx>.
+    Found 12-bit register for signal <rx_clk_count>.
+    Found 4-bit register for signal <rx_bit_count>.
+    Found 4-bit register for signal <data_buffer_base>.
+    Found 1-bit register for signal <state_rx>.
+    Found 8-bit register for signal <rx_data>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | counter<24> (rising_edge)                      |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 100                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit subtractor for signal <GND_1_o_GND_1_o_sub_87_OUT> created at line 276.
+    Found 25-bit adder for signal <counter[24]_GND_1_o_add_0_OUT> created at line 72.
+    Found 2-bit adder for signal <digit_sel[1]_GND_1_o_add_5_OUT> created at line 111.
+    Found 9-bit adder for signal <alert_num[8]_GND_1_o_add_13_OUT> created at line 140.
+    Found 3-bit adder for signal <reset_cnt[2]_GND_1_o_add_29_OUT> created at line 185.
+    Found 4-bit adder for signal <tx_bit_count[3]_GND_1_o_add_49_OUT> created at line 231.
+    Found 4-bit adder for signal <data_buffer_index[3]_GND_1_o_add_50_OUT> created at line 236.
+    Found 11-bit adder for signal <tx_clk_count[10]_GND_1_o_add_64_OUT> created at line 246.
+    Found 4-bit adder for signal <rx_bit_count[3]_GND_1_o_add_89_OUT> created at line 277.
+    Found 4-bit adder for signal <data_buffer_base[3]_GND_1_o_add_94_OUT> created at line 288.
+    Found 12-bit adder for signal <rx_clk_count[11]_GND_1_o_add_115_OUT> created at line 301.
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_48_OUT<2:0>> created at line 230.
+    Found 16x8-bit Read Only RAM for signal <fnd>
+    Found 4x8-bit Read Only RAM for signal <_n0467>
+    Found 1-bit 8-to-1 multiplexer for signal <GND_1_o_data_tx[7]_Mux_48_o> created at line 230.
+    Found 9-bit comparator greater for signal <alert_num[8]_GND_1_o_LessThan_15_o> created at line 146
+    Found 4-bit comparator equal for signal <n0038> created at line 218
+    Found 4-bit comparator greater for signal <n0044> created at line 229
+    Found 4-bit comparator greater for signal <rx_bit_count[3]_PWR_1_o_LessThan_85_o> created at line 275
+    Found 32-bit comparator lessequal for signal <n0094> created at line 276
+    Summary:
+	inferred   3 RAM(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred 127 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  27 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Startup> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 10x8-bit dual-port RAM                                : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+ 4x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 12
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 25-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 4
+ 5-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 20
+ 1-bit register                                        : 4
+ 11-bit register                                       : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 25-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 6
+ 5-bit register                                        : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Comparators                                          : 5
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 27
+ 1-bit 2-to-1 multiplexer                              : 15
+ 1-bit 8-to-1 multiplexer                              : 1
+ 11-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Startup>.
+The following registers are absorbed into counter <tx_clk_count>: 1 register on signal <tx_clk_count>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <reset_cnt>: 1 register on signal <reset_cnt>.
+The following registers are absorbed into counter <data_buffer_index>: 1 register on signal <data_buffer_index>.
+The following registers are absorbed into counter <data_buffer_base>: 1 register on signal <data_buffer_base>.
+The following registers are absorbed into counter <digit_sel>: 1 register on signal <digit_sel>.
+INFO:Xst:3231 - The small RAM <Mram_data_buffer> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk_50MHz>     | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <data_buffer_base> |          |
+    |     diA            | connected to signal <rx_data>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 10-word x 8-bit                     |          |
+    |     addrB          | connected to signal <data_buffer_index> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0467> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <digit_sel>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_fnd> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <number>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <fnd>           |          |
+    -----------------------------------------------------------------------
+Unit <Startup> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 10x8-bit dual-port distributed RAM                    : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+ 4x8-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 8
+ 12-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 4
+ 5-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 6
+ 11-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 25-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+# Registers                                            : 78
+ Flip-Flops                                            : 78
+# Comparators                                          : 5
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator equal                                : 1
+ 4-bit comparator greater                              : 2
+ 9-bit comparator greater                              : 1
+# Multiplexers                                         : 25
+ 1-bit 2-to-1 multiplexer                              : 15
+ 1-bit 8-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 4
+ 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <led_0> in Unit <Startup> is equivalent to the following 15 FFs/Latches, which will be removed : <led_1> <led_2> <led_3> <led_4> <led_5> <led_6> <led_7> <led_8> <led_9> <led_10> <led_11> <led_12> <led_13> <led_14> <led_15> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 100   | 00
+ 010   | 01
+ 001   | 11
+-------------------
+WARNING:Xst:1293 - FF/Latch <number_2> has a constant value of 0 in block <Startup>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <number_3> has a constant value of 0 in block <Startup>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Startup> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Startup, actual ratio is 3.
+FlipFlop led_0 has been replicated 15 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 127
+ Flip-Flops                                            : 127
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Startup.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 291
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 30
+#      LUT2                        : 21
+#      LUT3                        : 16
+#      LUT4                        : 28
+#      LUT5                        : 30
+#      LUT6                        : 57
+#      MUXCY                       : 45
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 127
+#      FD                          : 26
+#      FDC                         : 51
+#      FDE                         : 21
+#      FDP                         : 5
+#      FDR                         : 1
+#      FDRE                        : 23
+# RAMS                             : 3
+#      RAM16X1D                    : 2
+#      RAM32M                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 7
+#      OBUF                        : 35
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             106  out of  11440     0%  
+ Number of Slice LUTs:                  200  out of   5720     3%  
+    Number used as Logic:               192  out of   5720     3%  
+    Number used as Memory:                8  out of   1440     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    201
+   Number with an unused Flip Flop:      95  out of    201    47%  
+   Number with an unused LUT:             1  out of    201     0%  
+   Number of fully used LUT-FF pairs:   105  out of    201    52%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    102    42%  
+    IOB Flip Flops/Latches:              21
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_50MHz                          | BUFGP                  | 110   |
+counter_24                         | NONE(buzz)             | 12    |
+counter_10                         | NONE(digit_0)          | 8     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.835ns (Maximum Frequency: 171.380MHz)
+   Minimum input arrival time before clock: 5.915ns
+   Maximum output required time after clock: 5.324ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'counter_24'
+  Clock period: 3.383ns (frequency: 295.596MHz)
+  Total number of paths / destination ports: 80 / 11
+-------------------------------------------------------------------------
+Delay:               3.383ns (Levels of Logic = 2)
+  Source:            alert_num_4 (FF)
+  Destination:       alert_num_8 (FF)
+  Source Clock:      counter_24 rising
+  Destination Clock: counter_24 rising
+
+  Data Path: alert_num_4 to alert_num_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.525   1.234  alert_num_4 (alert_num_4)
+     LUT6:I1->O            3   0.254   1.042  Madd_alert_num[8]_GND_1_o_add_13_OUT_cy<5>11 (Madd_alert_num[8]_GND_1_o_add_13_OUT_cy<5>)
+     LUT6:I2->O            1   0.254   0.000  state[2]_GND_1_o_select_21_OUT<8>1 (state[2]_GND_1_o_select_21_OUT<8>)
+     FDE:D                     0.074          alert_num_8
+    ----------------------------------------
+    Total                      3.383ns (1.107ns logic, 2.276ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'counter_10'
+  Clock period: 2.444ns (frequency: 409.165MHz)
+  Total number of paths / destination ports: 13 / 8
+-------------------------------------------------------------------------
+Delay:               2.444ns (Levels of Logic = 1)
+  Source:            digit_sel_0 (FF)
+  Destination:       digit_sel_0 (FF)
+  Source Clock:      counter_10 rising
+  Destination Clock: counter_10 rising
+
+  Data Path: digit_sel_0 to digit_sel_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              7   0.525   0.909  digit_sel_0 (digit_sel_0)
+     INV:I->O              1   0.255   0.681  Mcount_digit_sel_xor<0>11_INV_0 (Mcount_digit_sel)
+     FDC:D                     0.074          digit_sel_0
+    ----------------------------------------
+    Total                      2.444ns (0.854ns logic, 1.590ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_50MHz'
+  Clock period: 5.835ns (frequency: 171.380MHz)
+  Total number of paths / destination ports: 4485 / 164
+-------------------------------------------------------------------------
+Delay:               5.835ns (Levels of Logic = 4)
+  Source:            rx_bit_count_2 (FF)
+  Destination:       rx_bit_count_0 (FF)
+  Source Clock:      clk_50MHz rising
+  Destination Clock: clk_50MHz rising
+
+  Data Path: rx_bit_count_2 to rx_bit_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               8   0.525   1.220  rx_bit_count_2 (rx_bit_count_2)
+     LUT4:I0->O           14   0.254   1.127  rx_bit_count[3]_PWR_1_o_LessThan_85_o1 (rx_bit_count[3]_PWR_1_o_LessThan_85_o)
+     LUT6:I5->O           12   0.254   1.069  rx_bit_count[3]_GND_1_o_AND_10_o1 (rx_bit_count[3]_GND_1_o_AND_10_o)
+     LUT6:I5->O            4   0.254   0.804  _n0445_inv11 (_n0445_inv1)
+     LUT6:I5->O            1   0.254   0.000  rx_bit_count_0_rstpot (rx_bit_count_0_rstpot)
+     FD:D                      0.074          rx_bit_count_0
+    ----------------------------------------
+    Total                      5.835ns (1.615ns logic, 4.220ns route)
+                                       (27.7% logic, 72.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_50MHz'
+  Total number of paths / destination ports: 140 / 123
+-------------------------------------------------------------------------
+Offset:              5.915ns (Levels of Logic = 4)
+  Source:            RXD (PAD)
+  Destination:       data_buffer_base_2 (FF)
+  Destination Clock: clk_50MHz rising
+
+  Data Path: RXD to data_buffer_base_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   1.328   1.765  RXD_IBUF (RXD_IBUF)
+     LUT6:I0->O            2   0.254   1.156  _n04581_SW0 (N28)
+     LUT6:I1->O            2   0.254   0.834  Mcount_data_buffer_base_val1 (Mcount_data_buffer_base_val)
+     LUT5:I3->O            1   0.250   0.000  data_buffer_base_2_rstpot (data_buffer_base_2_rstpot)
+     FD:D                      0.074          data_buffer_base_2
+    ----------------------------------------
+    Total                      5.915ns (2.160ns logic, 3.755ns route)
+                                       (36.5% logic, 63.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'counter_24'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              5.480ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       state_FSM_FFd2 (FF)
+  Destination Clock: counter_24 rising
+
+  Data Path: reset to state_FSM_FFd2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.328   1.486  reset_IBUF (reset_IBUF)
+     INV:I->O             67   0.255   1.952  reset_inv1_INV_0 (reset_inv)
+     FDC:CLR                   0.459          state_FSM_FFd1
+    ----------------------------------------
+    Total                      5.480ns (2.042ns logic, 3.438ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'counter_10'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              5.480ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       digit_0 (FF)
+  Destination Clock: counter_10 rising
+
+  Data Path: reset to digit_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            30   1.328   1.486  reset_IBUF (reset_IBUF)
+     INV:I->O             67   0.255   1.952  reset_inv1_INV_0 (reset_inv)
+     FDC:CLR                   0.459          number_0
+    ----------------------------------------
+    Total                      5.480ns (2.042ns logic, 3.438ns route)
+                                       (37.3% logic, 62.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50MHz'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            tx_bit (FF)
+  Destination:       TXD (PAD)
+  Source Clock:      clk_50MHz rising
+
+  Data Path: tx_bit to TXD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  tx_bit (tx_bit)
+     OBUF:I->O                 2.912          TXD_OBUF (TXD)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'counter_10'
+  Total number of paths / destination ports: 14 / 10
+-------------------------------------------------------------------------
+Offset:              5.324ns (Levels of Logic = 2)
+  Source:            number_0 (FF)
+  Destination:       fnd<7> (PAD)
+  Source Clock:      counter_10 rising
+
+  Data Path: number_0 to fnd<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.525   0.912  number_0 (number_0)
+     LUT2:I0->O            2   0.250   0.725  fnd<7>1 (fnd_7_OBUF)
+     OBUF:I->O                 2.912          fnd_7_OBUF (fnd<7>)
+    ----------------------------------------
+    Total                      5.324ns (3.687ns logic, 1.637ns route)
+                                       (69.3% logic, 30.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'counter_24'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            buzz (FF)
+  Destination:       buzz (PAD)
+  Source Clock:      counter_24 rising
+
+  Data Path: buzz to buzz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.525   0.681  buzz (buzz_OBUF)
+     OBUF:I->O                 2.912          buzz_OBUF (buzz)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_50MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50MHz      |    5.835|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock counter_10
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+counter_10     |    2.444|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock counter_24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+counter_24     |    3.383|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.03 secs
+ 
+--> 
+
+Total memory usage is 263208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

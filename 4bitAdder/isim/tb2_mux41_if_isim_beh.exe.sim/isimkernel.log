@@ -1,0 +1,29 @@
+Command line:
+   tb2_mux41_if_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49178
+
+Mon Apr 26 18:14:28 2021
+
+
+ Elaboration Time: 0.546875 sec
+
+ Current Memory Usage: 666.751 Meg
+
+ Total Signals          : 19
+ Total Nets             : 35
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 16
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 137
+Total Line Count : 32
+
+ Total Simulation Time: 0.546875 sec
+
+ Current Memory Usage: 666.751 Meg
+
+Mon Apr 26 18:14:42 2021
+

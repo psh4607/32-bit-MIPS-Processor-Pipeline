@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 mux41_case.ngc mux41_case.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mux41_case_map.ncd mux41_case.ngd mux41_case.pcf 
+par -w -intstyle ise -ol high -mt off mux41_case_map.ncd mux41_case.ncd mux41_case.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mux41_case.twx mux41_case.ncd -o mux41_case.twr mux41_case.pcf 
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.syr" 
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/mux41_case.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-2 mux41_case.ngc mux41_case.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mux41_case_map.ncd mux41_case.ngd mux41_case.pcf 
+par -w -intstyle ise -ol high -mt off mux41_case_map.ncd mux41_case.ncd mux41_case.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml mux41_case.twx mux41_case.ncd -o mux41_case.twr mux41_case.pcf 

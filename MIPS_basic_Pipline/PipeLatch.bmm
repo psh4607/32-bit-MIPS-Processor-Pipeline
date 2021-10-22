@@ -1,0 +1,114 @@
+`timescale 1ns / 1ps
+
+module IFID_reg(
+	input clk, rst,
+	
+	input [31:0] pc,
+	input [31:0] inst,
+	
+	output [31:0] out_pc,
+	output [31:0] out_inst
+    );
+
+	Flipflop pc(.clk(clk),.rst(rst),.a(pc),b(out_pc));
+	
+	Flipflop inst(.clk(clk),.rst(rst),.a(inst),b(out_inst));
+	
+	
+endmodule
+
+
+module IDEXE_reg(
+	input clk, rst,
+	
+	input ALUSrc, RegDst,  				//EXE stage control sig
+	input [1:0]ALUOp,		 				//EXE stage control sig
+	input branch, MemWrite, MemRead,	//MEM stage control sig
+	input PCSrc, MemtoReg ,regWrite,	//WB stage control sig
+	input pc, 
+	input [4:0] rs,rt,
+	input [31:0] regData1, regData2, immed,
+	input [5:0] funct,
+	
+	output A_ALUSrc, A_RegDst,
+	output [1:0] A_ALUOp,		 				//EXE stage control sig
+	output A_branch, A_MemWrite, A_MemRead,	//MEM stage control sig
+	output A_PCSrc, A_MemtoReg, A_regWrite,	//WB stage control sig
+	output A_pc,
+	output [4:0] A_rs, A_rt,
+	output [31:0] A_regData1, A_regData2, A_immed,
+	output [5:0] A_funct
+	
+	);
+	Flipflop ALUSrc(.clk(clk),.rst(rst),.a(ALUSrc),b(A_ALUSrc));
+	Flipflop RegDst(.clk(clk),.rst(rst),.a(RegDst),b(A_RegDst));
+	Flipflop ALUOp(.clk(clk),.rst(rst),.a(ALUOp),b(A_ALUOp));
+	Flipflop branch(.clk(clk),.rst(rst),.a(branch),b(A_branch));
+	Flipflop MemWrite(.clk(clk),.rst(rst),.a(MemWrite),b(A_MemWrite));
+	Flipflop MemRead(.clk(clk),.rst(rst),.a(MemRead),b(A_MemRead));
+	Flipflop PCSrc(.clk(clk),.rst(rst),.a(PCSrc),b(A_PCSrc));
+	Flipflop MemtoReg(.clk(clk),.rst(rst),.a(MemtoReg),b(A_MemtoReg));
+	Flipflop regWrite(.clk(clk),.rst(rst),.a(regWrite),b(A_regWrite));
+	Flipflop pc(.clk(clk),.rst(rst),.a(pc),b(out_pc));
+	Flipflop rs(.clk(clk),.rst(rst),.a(rs),b(A_rs));
+	Flipflop rt(.clk(clk),.rst(rst),.a(rt),b(A_rt));
+	Flipflop regData1(.clk(clk),.rst(rst),.a(regData1),b(A_regData1));
+	Flipflop regData2(.clk(clk),.rst(rst),.a(regData2),b(A_regData2));
+	Flipflop immed(.clk(clk),.rst(rst),.a(immed),b(A_immed));
+	Flipflop funct(.clk(clk),.rst(rst),.a(funct),b(A_funct));
+	
+endmodule 
+
+module EXEMEM_reg(
+	input clk,rst,
+	
+	input [4:0] regDesti,
+	input [31:0] target,
+	input [31:0] result,
+	input zero,
+	
+	input branch, MemWrite, MemRead,	//MEM stage control sig
+	input PCSrc, MemtoReg, regWrite,	//WB stage control sig
+	
+	output [4:0] A_regDesti,
+	output [31:0] A_target,
+	output [31:0] A_result,
+	output A_zero,
+	
+	output A_branch, A_MemWrite, A_MemRead,	//MEM stage control sig
+	output A_PCSrc, A_MemtoReg, A_regWrite	//WB stage control sig
+	);
+	
+	Flipflop regDesti(.clk(clk),.rst(rst),.a(regDesti),b(A_regDesti));
+	Flipflop target(.clk(clk),.rst(rst),.a(target),b(A_target));
+	Flipflop result(.clk(clk),.rst(rst),.a(result),b(A_result));
+	Flipflop zero(.clk(clk),.rst(rst),.a(zero),b(A_zero));
+	Flipflop branch(.clk(clk),.rst(rst),.a(branch),b(A_branch));
+	Flipflop MemWrite(.clk(clk),.rst(rst),.a(MemWrite),b(A_MemWrite));
+	Flipflop MemRead(.clk(clk),.rst(rst),.a(MemRead),b(A_MemRead));
+	Flipflop PCSrc(.clk(clk),.rst(rst),.a(PCSrc),b(A_PCSrc));
+	Flipflop MemtoReg(.clk(clk),.rst(rst),.a(MemtoReg),b(A_MemtoReg));
+	Flipflop regWrite(.clk(clk),.rst(rst),.a(regWrite),b(A_regWrite));
+	
+endmodule 
+
+module MEMWB_reg(
+	input clk, rst,
+	
+	input [4:0] regDesti,
+	input [31:0] ReadData, result,
+	input PCSrc, MemtoReg,	//WB stage control sig
+	
+	output [4:0] A_regDesti,
+	output [31:0] M_ReadData,A_result,
+	output A_PCSrc, A_MemtoReg	//WB stage control sig
+	
+	);
+	
+	Flipflop regDesti(.clk(clk),.rst(rst),.a(regDesti),b(A_regDesti));
+	Flipflop ReadData(.clk(clk),.rst(rst),.a(ReadData),b(A_ReadData));
+	Flipflop result(.clk(clk),.rst(rst),.a(result),b(A_result));
+	Flipflop PCSrc(.clk(clk),.rst(rst),.a(PCSrc),b(A_PCSrc));
+	Flipflop MemtoReg(.clk(clk),.rst(rst),.a(MemtoReg),b(A_MemtoReg));
+	
+endmodule 

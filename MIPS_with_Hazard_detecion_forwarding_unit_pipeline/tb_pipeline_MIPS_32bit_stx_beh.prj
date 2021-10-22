@@ -1,0 +1,7 @@
+verilog isim_temp "../memory_advanced.v"
+verilog isim_temp "../flipflop.v"
+verilog isim_temp "../alu_advanced.v"
+verilog isim_temp "../stages_advanced.v"
+verilog isim_temp "../pipeline_advanced.v"
+verilog isim_temp "../tb_pipeline.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

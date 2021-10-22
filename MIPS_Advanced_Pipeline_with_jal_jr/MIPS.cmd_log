@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/MIPS.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/MIPS.syr" 

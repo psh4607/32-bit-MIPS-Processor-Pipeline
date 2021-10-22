@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.syr" 
+xst -intstyle ise -ifn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.xst" -ofn "C:/Users/HO_win7/Documents/FPGA/subject2/counter.syr" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/HO_win7/Documents/FPGA/aluDesign/tb_ALU_1bit_isim_beh.exe" -prj "C:/Users/HO_win7/Documents/FPGA/aluDesign/tb_ALU_1bit_beh.prj" "work.tb_ALU_1bit" "work.glbl" 

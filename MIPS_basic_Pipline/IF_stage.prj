@@ -1,0 +1,2 @@
+verilog work "InstMem.v"
+verilog work "IF_stage.v"

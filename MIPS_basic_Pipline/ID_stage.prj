@@ -1,0 +1,4 @@
+verilog work "SignExtendUnit.v"
+verilog work "registers.v"
+verilog work "controller.v"
+verilog work "ID_stage.v"

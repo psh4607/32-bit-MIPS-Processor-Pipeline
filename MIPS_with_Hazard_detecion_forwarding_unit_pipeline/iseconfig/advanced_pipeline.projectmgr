@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="advanced_pipeline" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/EXEMEMStage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/EXEStage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/IDEXEStage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/IDstage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/IFIDstage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/IFstage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/MEMStage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/MEMWBstage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/WBstage C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|stages.v</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/EXE_Stage - EXEStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/IDEXE_Stage - IDEXEStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/ID_Stage - IDstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/IFID_Stage - IFIDstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/IF_Stage - IFstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/MEMWB_Stage - MEMWBstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/MEM_Stage - MEMStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline.v/WB_Stage - WBstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/EXE_Stage - EXEStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/IDEXE_Stage - IDEXEStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/MEMWB_Stage - MEMWBstage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/MEM_Stage - MEMStage</ClosedNode>
+         <ClosedNode>/pipeline C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|pipeline_advanced.v/WB_Stage - WBstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/EXE_Stage - EXEStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/IDEXE_Stage - IDEXEStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/ID_Stage - IDstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/IFID_Stage - IFIDstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/IF_Stage - IFstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/MEMWB_Stage - MEMWBstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/MEM_Stage - MEMStage</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>uut - pipeline (C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/pipeline_advanced.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000208000000020000000000000000000000000200000064ffffffff000000810000000300000002000002080000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>uut - pipeline (C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/pipeline_advanced.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002c1000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004700000001000000000000002900000001000000000000007a0000000100000000000001d70000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>alu_advanced.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000012f000000010001000100000000000000000000000064ffffffff0000008100000000000000010000012f0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d2000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>memory_advanced.v (C:/Users/HwangHyeonJo/Documents/proj/CA/advanced/memory_advanced.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000020000000000000000000000000000000064ffffffff000000810000000000000002000000c80000000100000000000000770000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>memory_advanced.v (C:/Users/HwangHyeonJo/Documents/proj/CA/advanced/memory_advanced.v)</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000002290000011801000000050100000002</SourceProcessView>
+   <CurrentView>Behavioral Simulation</CurrentView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/IDEXE_Stage - IDEXEStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/MEMWB_Stage - MEMWBstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Desktop|advanced|tb_pipeline.v/uut - pipeline/MEM_Stage - MEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Documents|FPGA|advanced_with|advanced|tb_pipeline.v/uut - pipeline/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Documents|FPGA|advanced_with|advanced|tb_pipeline.v/uut - pipeline/IDEXE_Stage - IDEXEStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Documents|FPGA|advanced_with|advanced|tb_pipeline.v/uut - pipeline/MEMWB_Stage - MEMWBstage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HO_win7|Documents|FPGA|advanced_with|advanced|tb_pipeline.v/uut - pipeline/MEM_Stage - MEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|tb_pipeline_MIPS_32bit.v/uut - pipeline/EXEMEM_Stage - EXEMEMStage</ClosedNode>
+         <ClosedNode>/tb_pipeline_MIPS_32bit C:|Users|HwangHyeonJo|Documents|proj|CA|advanced|tb_pipeline_MIPS_32bit.v/uut - pipeline/IDEXE_Stage - IDEXEStage</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>tb_pipeline_MIPS_32bit (C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/tb_pipeline.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d7000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d70000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>tb_pipeline_MIPS_32bit (C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/tb_pipeline.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e70000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e70000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e70000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

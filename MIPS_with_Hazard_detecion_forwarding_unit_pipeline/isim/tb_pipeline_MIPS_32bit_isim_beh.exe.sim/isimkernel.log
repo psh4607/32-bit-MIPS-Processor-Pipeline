@@ -1,0 +1,29 @@
+Command line:
+   tb_pipeline_MIPS_32bit_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55674
+
+Fri Oct 22 10:13:57 2021
+
+
+ Elaboration Time: 0.109375 sec
+
+ Current Memory Usage: 683.553 Meg
+
+ Total Signals          : 2135
+ Total Nets             : 1198
+ Total Signal Drivers   : 567
+ Total Blocks           : 525
+ Total Primitive Blocks : 514
+ Total Processes        : 909
+ Total Traceable Variables  : 369
+ Total Scalar Nets and Variables : 4886
+Total Line Count : 2170
+
+ Total Simulation Time: 0.34375 sec
+
+ Current Memory Usage: 683.553 Meg
+
+Fri Oct 22 10:14:21 2021
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/tb_pipeline_MIPS_32bit_isim_beh.exe" -prj "C:/Users/HO_win7/Documents/FPGA/advanced_with/advanced/advanced_pipeline/tb_pipeline_MIPS_32bit_beh.prj" "work.tb_pipeline_MIPS_32bit" "work.glbl" 

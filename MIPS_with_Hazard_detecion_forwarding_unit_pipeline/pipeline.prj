@@ -1,0 +1,6 @@
+verilog work "../memory_advanced.v"
+verilog work "../flipflop.v"
+verilog work "../alu_advanced.v"
+verilog work "../stages_advanced.v"
+verilog work "clock_div.v"
+verilog work "../pipeline_advanced.v"

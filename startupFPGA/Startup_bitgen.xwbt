@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\HO_win7\Documents\FPGA\startupFPGA\Startup.ncd
+OUTFILE=C:\Users\HO_win7\Documents\FPGA\startupFPGA\Startup.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\HO_win7\Documents\FPGA\startupFPGA
+LICENSE=WebPack
+USER_INFO=212172024_0_0_133

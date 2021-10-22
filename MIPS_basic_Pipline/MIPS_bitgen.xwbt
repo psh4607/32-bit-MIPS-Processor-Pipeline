@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\HO_win7\Documents\FPGA\basic_pipline\MIPS.ncd
+OUTFILE=C:\Users\HO_win7\Documents\FPGA\basic_pipline\MIPS.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\HO_win7\Documents\FPGA\basic_pipline
+LICENSE=WebPack
+USER_INFO=212172024_0_0_133

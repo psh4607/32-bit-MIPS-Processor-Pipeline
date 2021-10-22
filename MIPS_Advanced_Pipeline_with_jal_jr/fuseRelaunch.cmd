@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS_isim_beh.exe" -prj "C:/Users/HO_win7/Documents/FPGA/Advanced_withj/Advancedwithj/tb_MIPS_beh.prj" "work.tb_MIPS" "work.glbl" 

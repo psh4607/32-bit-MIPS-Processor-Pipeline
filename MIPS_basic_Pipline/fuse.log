@@ -1,0 +1,58 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/tb_MIPS_isim_beh.exe -prj C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/tb_MIPS_beh.prj work.tb_MIPS work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/SignExtendUnit.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/registers.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/PCSrc_Mux.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/PC.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/InstMem.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/Flipflop.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/DataMemory.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/controller.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/ALUwC.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/WB_stage.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/PipeLatch.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/MEM_stage.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/IF_stage.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/ID_stage.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/EXE_stage.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/MIPS.v" into library work
+Analyzing Verilog file "C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/tb_MIPS.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module PCSrc_Mux
+Compiling module PC
+Compiling module PC_adder
+Compiling module InstMem
+Compiling module IF_stage
+Compiling module Flipflop32
+Compiling module IFID_reg
+Compiling module controller
+Compiling module SignExtend
+Compiling module registers
+Compiling module ID_stage
+Compiling module Flipflop
+Compiling module Flipflop2
+Compiling module Flipflop5
+Compiling module Flipflop6
+Compiling module IDEXE_reg
+Compiling module ALU_control
+Compiling module ALU
+Compiling module EXE_stage
+Compiling module EXEMEM_reg
+Compiling module DataMemory
+Compiling module MEM_stage
+Compiling module MEMWB_reg
+Compiling module WB_stage
+Compiling module MIPS
+Compiling module tb_MIPS
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 27 Verilog Units
+Built simulation executable C:/Users/HO_win7/Documents/FPGA/MIPS_basic_pipline/tb_MIPS_isim_beh.exe
+Fuse Memory Usage: 29236 KB
+Fuse CPU Usage: 999 ms

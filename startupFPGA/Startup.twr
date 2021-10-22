@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml Startup.twx Startup.ncd -o Startup.twr Startup.pcf
+
+Design file:              Startup.ncd
+Physical constraint file: Startup.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_50MHz
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RXD         |    3.943(R)|      SLOW  |   -0.225(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+key<0>      |   -0.095(R)|      FAST  |    1.702(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+key<1>      |   -0.056(R)|      SLOW  |    1.541(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+key<2>      |   -0.030(R)|      FAST  |    1.637(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+key<3>      |    0.009(R)|      SLOW  |    1.476(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+key<4>      |   -0.022(R)|      FAST  |    1.629(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+reset       |   10.331(R)|      SLOW  |   -0.142(R)|      SLOW  |clk_50MHz_BUFGP   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk_50MHz to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+TXD         |         9.385(R)|      SLOW  |         3.929(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+keyLed<0>   |        11.718(R)|      SLOW  |         4.653(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+keyLed<1>   |        11.973(R)|      SLOW  |         4.800(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+keyLed<2>   |        10.852(R)|      SLOW  |         4.151(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+keyLed<3>   |        10.948(R)|      SLOW  |         4.200(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+keyLed<4>   |        10.710(R)|      SLOW  |         4.070(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<0>      |         7.928(R)|      SLOW  |         2.911(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<1>      |         7.928(R)|      SLOW  |         2.911(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<2>      |         7.931(R)|      SLOW  |         2.914(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<3>      |         7.931(R)|      SLOW  |         2.914(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<4>      |         7.933(R)|      SLOW  |         2.916(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<5>      |         7.933(R)|      SLOW  |         2.916(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<6>      |         7.936(R)|      SLOW  |         2.919(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<7>      |         7.936(R)|      SLOW  |         2.919(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<8>      |         7.875(R)|      SLOW  |         2.858(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<9>      |         7.875(R)|      SLOW  |         2.858(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<10>     |         7.876(R)|      SLOW  |         2.859(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<11>     |         7.876(R)|      SLOW  |         2.859(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<12>     |         7.879(R)|      SLOW  |         2.862(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<13>     |         7.879(R)|      SLOW  |         2.862(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<14>     |         7.878(R)|      SLOW  |         2.861(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+led<15>     |         7.878(R)|      SLOW  |         2.861(R)|      FAST  |clk_50MHz_BUFGP   |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_50MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_50MHz      |    5.509|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Jun 22 10:51:33 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 232 MB
+
+
+

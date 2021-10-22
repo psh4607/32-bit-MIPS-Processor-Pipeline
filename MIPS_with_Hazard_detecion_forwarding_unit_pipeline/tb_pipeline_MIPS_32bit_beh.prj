@@ -1,0 +1,8 @@
+verilog work "../memory_advanced.v"
+verilog work "../flipflop.v"
+verilog work "../alu_advanced.v"
+verilog work "../stages_advanced.v"
+verilog work "clock_div.v"
+verilog work "../pipeline_advanced.v"
+verilog work "../tb_pipeline.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
