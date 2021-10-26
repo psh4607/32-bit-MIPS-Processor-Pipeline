@@ -10,10 +10,10 @@ Verilog를 사용한 32bit MIPS 프로세서 설계 파일입니다.
 - Verilog
 
 ## 구현 목록
-- 1bit Adder
-- 4bit Adder
-- ALU(Arithmetic Logic Unit)
-- Memory
+- [1bit Adder](https://github.com/ho4607/32bit_MIPS_Pipeline/tree/master/1bitAdder)
+- [4bit Adder](https://github.com/ho4607/32bit_MIPS_Pipeline/tree/master/4bitAdder)
+- [ALU(Arithmetic Logic Unit)](https://github.com/ho4607/32bit_MIPS_Pipeline/tree/master/ALU)
+- [Memory](https://github.com/ho4607/32bit_MIPS_Pipeline/tree/master/memory)
 - 32bit MIPS 
 - MIPS (with Hazard detection unit, Forwarding unit)
 - MIPS (with jump, jal, jr)
