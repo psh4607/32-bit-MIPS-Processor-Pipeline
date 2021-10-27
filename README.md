@@ -1,5 +1,5 @@
 # 32bit_MIPS_Pipeline
-Verilog를 사용한 32bit MIPS 프로세서 설계 파일입니다.
+A 32-bit MIPS processor developed in Verilog based on pipeline.
 
 ## 프로그램 환경
 - Windows 7
