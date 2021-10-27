@@ -23,6 +23,13 @@ Verilog를 사용한 32bit MIPS 프로세서 설계 파일입니다.
 ### 32bit MIPS
 파이프라인(Pipeline)을 기반으로 가장 간단한 MIPS 명령어를 지원하는 프로세서를 설계했습니다. 특정 Instruction을 읽어 동작을 수행하고 그 결과를 출력하는 과정을 담은 시뮬레이션 파일입니다. Spartan 6 FPGA보드 위에 올려보면 올바르게 동작하는 것을 확인 할 수 있습니다. 파이프라인 구조는 Instruction-level의 Paralleslism을 위한 기술로, CPU의 퍼포먼스(Throughtput)을 올리는데 효율적인 구조입니다. 앞서 설계한 Single-Cycle 방식과는 달리 명령어 집합을 단계를 나누어 여러 Cycle에 동시에 병렬처리 함으로써 파이프라인을 가능하게 합니다.
 
+**지원하는 Instruction**
+- ADD
+- sub
+- LW
+- SW
+- BEQ
+
 해당 코드는 IF, ID, EXE, MEM, WB의 5단계의 Stage로 나누었으며, 각 단계에 Flipflop 형태의 Latch를 두어 레지스터에 상태정보를 저장하고 넘겨주도록 설계되었습니다. 여기서 사용한 ALU 모듈은 앞서 설계한 ALU와는 다르게 Clock Synchronized 방식으로 설계되어있으며, FPGA위에 올리기 위해 Behavior level로 설계되었습니다. 기존의 방식으로는 Resource 관련 Overhead 이슈로 올라가지 못합니다. 또한 Positive Edge 일 때 reset 하도록 설계했습니다. 마찬가지로 FPGA 호환 문제 때문입니다. 일반적으로 Negative Edge에서 reset을 하지만 FPGA에서 Negative Edge에서 reset이 되지 않는 이이슈가 있습니다. 
 
 테스트를 위한 Instruction Memory에 다음의 명령어가 입력되어 있습니다. 또한 테스트벤치에서 결과를 확인하기 위해 ALU의 Result를 Pipeline 모듈의 output으로 볼수 있게 연결하였습니다.
@@ -42,13 +49,6 @@ memInstdata[8] = 32'b000000_00011_00100_00001_00000_100010;
 memInstdata[12] = 32'b100011_00110_00101_0000_0000_0000_0000;
 memInstdata[16] = 32'b000100_00011_00100_1111111111111100;
 ```
-
-지원하는 Instruction
-- ADD
-- sub
-- LW
-- SW
-- BEQ
 
 테스트벤치에서 돌린 시뮬레이션 결과를 확인해 봅시다.
 
@@ -79,6 +79,7 @@ Result의 시뮬레이션 결과값은 IF, ID, 이후 2사이클 뒤에 EXE를 �
 ```
 
 ### MIPS (with Hazard detection unit, Forwarding unit)
+
 이 MIPS 파일은 앞서 설계한 파이프라인 기반 MIPS 프로세서에 Hazard detection Unit과 이를 Control하기 위한 Fowarding unit을 추가한 Verilog 파일입니다. Hazard를 관리하고 branch의 flush까지 관리해주는 MIPS 프로세서입니다. 구조는 다음 그림과 같습니다.   
 
 ![image](https://user-images.githubusercontent.com/49228032/138997950-b291798b-d085-4596-b368-9bba11cfb4c5.png)
@@ -87,6 +88,13 @@ Instruction의 fuct와 ALUop라는 control signal을 가져와 시행하며 ALUO
 instruction 수행에 필요한 연산이 이루어질 수 있도록 4bit alu ctrl_sig를 output으로 가지도록 하였습니다. 이 또한 아래의 OP코드 테이블을 참고하여 만들었습니다. 
 
 ![image](https://user-images.githubusercontent.com/49228032/139008866-2e8ee458-5f98-4632-a921-0d20ba282b8c.png)
+
+**지원하는 Instruction**
+- ADD
+- sub
+- LW
+- SW
+- BEQ
 
 우선 레지스터에 다음의 값으로 초기화 되어있습니다.
 
@@ -109,13 +117,6 @@ inst_mem[3] <= 32'b000000_00001_01001_01000_00000_100101;   //          or  $8(r
 inst_mem[4] <= 32'b000100_00110_00000_1111_1111_1111_1011;  //          beq $6(rs), $0(rt), Label(imme)
 ```
 
-지원하는 Instruction
-- ADD
-- sub
-- LW
-- SW
-- BEQ
-
 테스트벤치 결과확인을 하면, 다음의 결과를 확인할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/49228032/139009727-8731b7cb-e9f9-4eb8-995d-c02c94bd746b.png)
@@ -123,6 +124,16 @@ inst_mem[4] <= 32'b000100_00110_00000_1111_1111_1111_1011;  //          beq $6(r
 LW와 SUB 사이는 LOAD USE HAZARD가 발생하여 1개의 stall 이 발생합니다. 그렇기에 LW와 SUB사이에 결과 값 0이 존재해야합니다. 먼저 lw의 ALU 연산 값인 4+8=12가 먼저 나오고 그 다음에 STALL값 0 그 이후 SUB 명령어에 의해 28(이때 AND의 RS에 MEM 포워딩이 동작합니다.), AND 명령어에 의해 0 값이 그 다음에 나와야하고, OR 명령어에 의해 31 그리고 BEQ 의 SUB연산에 의해 0이 나와 올바르게 동작하는 것을 알 수 있습니다.
 
 ### MIPS (with jump, jal, jr)
+
+**지원하는 Instruction**
+- ADD
+- sub
+- LW
+- SW
+- BEQ
+- Jal
+- Jr
+
 앞서 설계한 Hazard detection와 Fowarding Unit을 포함하는 MIPS에 Jal, Jr instruction을 수행할 수 있도록 설계한 Verilog 파일입니다. 이번에 설계한 이 프로세서는 다음의 상당히 간단한 C코드를 어셈블리어로 변환해서 돌립니다. 또한 변수 a, b, c, d는 다음의 레지스터에 대응되게 해야합니다. 
 
 `a : $a0`
@@ -167,20 +178,11 @@ mem_Inst_data[14] <= 32'b000000_00000_00000_00000_00000_000000;
 mem_Inst_data[15] <= 32'b000000_00000_00000_00000_00000_000000; 
 ```
 
-
-지원하는 Instruction
-- ADD
-- sub
-- LW
-- SW
-- BEQ
-- Jal
-- Jr
-
+테스트벤치 결과확인을 하면, 다음의 결과를 확인할 수 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/49228032/139015917-e8f1fcf1-73a7-4020-95d4-a5bab05a550c.png)
 
-결과 테스트벤치를 확인해보겠습니다. 결과 EXE 단계에서 ALU의 결과를 RESULT로 하는 결과를 살펴보면 예측했던 0 0 0 0 1 1 2 4 0 12 값을 갖음을 알 수 있습니다. 이때 JAL에서 EXE 단계까지 3사이클이 걸려 0이 출력된 후 lw는 jal에 의해 flush됩니다. 그래서 4번째 사이클도 결과가 0 입니다. 그후 sub 명령어를 두번 실행하여 ALU 결과 1을 두번 출력합니다. 그리고 7번째 add 명령어에 의해 2가 출력 되는 것을 볼 수 있고, 이후 JR명령어가 ID 단계에서 작동하여 PC 값은 $ra 레지스터에 담겨있던 4로 이동하지만, 명령어 WB 단계까지 진행해야 하므로 ALU 결과가 $ra에 담
+결과 EXE 단계에서 ALU의 결과를 RESULT로 하는 결과를 살펴보면 예측했던 0 0 0 0 1 1 2 4 0 12 값을 갖음을 알 수 있습니다. 이때 JAL에서 EXE 단계까지 3사이클이 걸려 0이 출력된 후 lw는 jal에 의해 flush됩니다. 그래서 4번째 사이클도 결과가 0 입니다. 그후 sub 명령어를 두번 실행하여 ALU 결과 1을 두번 출력합니다. 그리고 7번째 add 명령어에 의해 2가 출력 되는 것을 볼 수 있고, 이후 JR명령어가 ID 단계에서 작동하여 PC 값은 $ra 레지스터에 담겨있던 4로 이동하지만, 명령어 WB 단계까지 진행해야 하므로 ALU 결과가 $ra에 담
 겨있는 4가 되는 것을 알 수 있습니다. 이후 점프 된 PC에 의해 lw 명령어의 결과인 12가 출력되었습니다. 
 
 결과를 살펴보면 IF 단계의 PC 값이 4가 되고 4사이클 뒤인 MEM 단계에서 30을 가져오는 것으로 보아 lw 명령어도 잘 동작합니다. 그리고 해저드 또한 Flush가 발생할 때 잘 나타나므로 올게 동작합니다.
