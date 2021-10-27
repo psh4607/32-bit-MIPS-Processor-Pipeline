@@ -49,6 +49,31 @@ memInstdata[16] = 32'b000100_00011_00100_1111111111111100;
 - SW
 - BEQ
 
+테스트벤치에서 돌린 시뮬레이션 결과를 확인해 봅시다.
+
+![image](https://user-images.githubusercontent.com/49228032/138995814-207cb7c7-78ae-49d2-a008-6222a862fd76.png)
+
+Result의 시뮬레이션 결과값은 IF, ID, 이후 2사이클 뒤에 EXE를 시작으로 6 0 64 0.순으로 올게 나오는 것을 확인 할 수 있습니다. 만약 FPGA위에서 올돌리고 싶다면 counter의 주석을 제거하고 아래의 `assign clk = cclk;` 부분을 주석처리 하면 됩니다. 또한 [테스트벤치 파일](https://github.com/ho4607/32bit_MIPS_Pipeline/blob/master/MIPS_basic_Pipline/tb_MIPS.v)의 input을 알맞게 수정하면 됩니다. 
+
+```Verilog
+	// from wb wire
+	wire [31:0] wwb1;
+	wire clk;
+
+//	counter clk_d(
+//		.cclk(cclk),
+//		.rst(rst),
+//		.clk_operating(clk)
+//	);
+	
+	//Comment out the code below if you want to run it on FPGA 
+	//If you want to run it in a testbench, uncomment it.  
+	assign clk = cclk;
+	//--------------------------------------------------------
+	
+	IF_stage IF(
+```
+
 ### ALU
 ALU란 Arithmetic Logic Unit의 줄임말로 프로세서의 산술연산을 수행하는 모듈입니다. CPU의 일부로 명령어 내에 있는 연산자들에 대해 논리동작을 담당하는 중요한 모듈입니다. ALU는 연산 결과 Result 값이 0일 때 1을 출력해야하며, 아닐 때는 0을 출력해야합니다. ADD연산은 비트를 더하여 올림이 발생하면 Carrry out을 1로하여 덧셈의 결과를 출력합니다. SUB은 b의 입력에 Not 게이트를 통과시켜 보수를 구한 후 1을 더한 2의 보수를 구하여 a의 입력과 더합니다. SLT연산은 a와 b를 비교하여 a가 b보다 작으면 1을 출력하고, 그렇지 않으면 0을 출력합니다. 실제로 구현하기 위하여
 a입력과 b입력의 차를 구하여 결과가 양수이면 0을 결과가 음수이면 0을 출력하도록 하였습니다. 32bit ALU에서 SLT연산중 overflow가 발생하면 x bit(0과 1이 아님)를 결과로 출력하였습니다. 실제로는 overflow가 발생하면 overflow의 output 포트에 1, 그렇지 않은경우 0을 출력해야합니다. 이 ALU는 MIPS에서 사용된 ALU와는 다르게 Clock에 비동기적으로 작동하는 ALU입니다.
