@@ -23,9 +23,10 @@ Verilog를 사용한 32bit MIPS 프로세서 설계 파일입니다.
 ### 32bit MIPS
 파이프라인(Pipeline)을 기반으로 가장 간단한 MIPS 명령어를 지원하는 프로세서를 설계했습니다. 특정 Instruction을 읽어 동작을 수행하고 그 결과를 출력하는 과정을 담은 시뮬레이션 파일입니다. Spartan 6 FPGA보드 위에 올려보면 올바르게 동작하는 것을 확인 할 수 있습니다. 파이프라인 구조는 Instruction-level의 Paralleslism을 위한 기술로, CPU의 퍼포먼스(Throughtput)을 올리는데 효율적인 구조입니다. 앞서 설계한 Single-Cycle 방식과는 달리 명령어 집합을 단계를 나누어 여러 Cycle에 동시에 병렬처리 함으로써 파이프라인을 가능하게 합니다.
 
-해당 코드는 IF, ID, EXE, MEM, WB의 5단계의 Stage로 나누었으며, 각 단계에 Flipflop 형태의 Latch를 두어 레지스터에 상태정보를 저장하고 넘겨주도록 설계되었습니다. 여기서 사용한 ALU 모듈은 앞서 설계한 ALU와는 다르게 Clock Synchronized 방식으로 설계되어있으며, FPGA위에 올리기 위해 Behavior level로 설계되었습니다. 기존의 방식으로는 Resource 관련 Overhead 이슈로 올라가지 못합니다.
+해당 코드는 IF, ID, EXE, MEM, WB의 5단계의 Stage로 나누었으며, 각 단계에 Flipflop 형태의 Latch를 두어 레지스터에 상태정보를 저장하고 넘겨주도록 설계되었습니다. 여기서 사용한 ALU 모듈은 앞서 설계한 ALU와는 다르게 Clock Synchronized 방식으로 설계되어있으며, FPGA위에 올리기 위해 Behavior level로 설계되었습니다. 기존의 방식으로는 Resource 관련 Overhead 이슈로 올라가지 못합니다. 또한 Positive Edge 일 때 reset 하도록 설계했습니다. 마찬가지로 FPGA 호환 문제 때문입니다. 일반적으로 Negative Edge에서 reset을 하지만 FPGA에서 Negative Edge에서 reset이 되지 않는 이이슈가 있습니다. 
 
-테스트를 위한 Instruction Memory에 다음의 명령어가 입력되어 있습니다.
+테스트를 위한 Instruction Memory에 다음의 명령어가 입력되어 있습니다. 또한 테스트벤치에서 결과를 확인하기 위해 ALU의 Result를 Pipeline 모듈의 output으로 볼수 있게 연결하였습니다.
+
 
 `$3=3, $4=3, $6=0x40, Mem[0x40]=30`
 ```assembly
@@ -79,11 +80,16 @@ Result의 시뮬레이션 결과값은 IF, ID, 이후 2사이클 뒤에 EXE를 �
 
 ![image](https://user-images.githubusercontent.com/49228032/138997950-b291798b-d085-4596-b368-9bba11cfb4c5.png)
 
+Instruction의 fuct와 ALUop라는 control signal을 가져와 시행하며 ALUOP[1]이 0이 되는 경우 ALU Control sig가 4비트 0010 나오도록 하였고 ALUOP[1]이 1이 되는 경우 if 문을 사용해 각
+instruction 수행에 필요한 연산이 이루어질 수 있도록 4bit alu ctrl_sig를 output으로 가지도록 하였습니다. 이 또한 아래의 OP코드 테이블을 참고하여 만들었습니다. 
+
+![image](https://user-images.githubusercontent.com/49228032/139008866-2e8ee458-5f98-4632-a921-0d20ba282b8c.png)
+
 우선 레지스터에 다음의 값으로 초기화 되어있습니다.
 
 `mem[0xC] = 30 , $1 = 20, $2 = 8, $5 = 2, $7 = 1, $9 = 3, $6 = 0 `
 
-테스트를 위한 Instruction Memory에 다음의 명령어가 입력되어 있습니다.
+테스트를 위한 Instruction Memory에 다음의 명령어가 입력되어 있습니다. 또한 테스트벤치에서 결과를 확인하기 위해 ALU의 Result를 Pipeline 모듈의 output으로 볼수 있게 연결하였습니다. 위의 MIPS와 마찬가지로 Positive Edge 일 때 reset 하도록 설계했습니다. 마찬가지로 FPGA 호환 문제 때문입니다. 일반적으로 Negative Edge에서 reset을 하지만 FPGA에서 Negative Edge에서 reset이 되지 않는 이이슈가 있습니다.
 
 ```assembly
 Label : Lw  $1, 4($2)
@@ -93,14 +99,17 @@ Label : Lw  $1, 4($2)
 	Beq $6, $0, Label
 ```
 ```Verilog
-inst_mem[0] <= 32'b100011_00010_00001_0000_0000_0000_0100; // Label:   lw  $1(rt), 4[imme]($2[rs]) 
+inst_mem[0] <= 32'b100011_00010_00001_0000_0000_0000_0100;  // Label:   lw  $1(rt), 4[imme]($2[rs]) 
 inst_mem[1] <= 32'b000000_00001_00101_00100_00000_100010;   //          sub $4(rd), $1(rs), $5(rt) 
 inst_mem[2] <= 32'b000000_00001_00111_00110_00000_100100;   //          and $6(rd), $1(rs), $7(rt)
-inst_mem[3] <= 32'b000000_00001_01001_01000_00000_100101;   //           or  $8(rd), $1(rs), $9(rt)
-inst_mem[4] <= 32'b000100_00110_00000_1111_1111_1111_1011; //           beq $6(rs), $0(rt), Label(imme)
+inst_mem[3] <= 32'b000000_00001_01001_01000_00000_100101;   //          or  $8(rd), $1(rs), $9(rt)
+inst_mem[4] <= 32'b000100_00110_00000_1111_1111_1111_1011;  //          beq $6(rs), $0(rt), Label(imme)
 ```
+테스트벤치 결과확인을 하면, 다음의 결과를 확인할 수 있습니다. 
 
+![image](https://user-images.githubusercontent.com/49228032/139009727-8731b7cb-e9f9-4eb8-995d-c02c94bd746b.png)
 
+LW와 SUB 사이는 LOAD USE HAZARD가 발생하여 1개의 stall 이 발생합니다. 그렇기에 LW와 SUB사이에 결과 값 0이 존재해야합니다. 먼저 lw의 ALU 연산 값인 4+8=12가 먼저 나오고 그 다음에 STALL값 0 그 이후 SUB 명령어에 의해 28(이때 AND의 RS에 MEM 포워딩이 동작합니다.), AND 명령어에 의해 0 값이 그 다음에 나와야하고, OR 명령어에 의해 31 그리고 BEQ 의 SUB연산에 의해 0이 나와 올바르게 동작하는 것을 알 수 있습니다.
 
 
 ### ALU
