@@ -25,16 +25,21 @@ ALU란 Arithmetic Logic Unit의 줄임말로 프로세서의 산술연산을 수
 a입력과 b입력의 차를 구하여 결과가 양수이면 0을 결과가 음수이면 0을 출력하도록 하였습니다. 32bit ALU에서 SLT연산중 overflow가 발생하면 x bit(0과 1이 아님)를 결과로 출력하였습니다. 실제로는 overflow가 발생하면 overflow의 output 포트에 1, 그렇지 않은경우 0을 출력해야합니다. 이 ALU는 MIPS에서 사용된 ALU와는 다르게 Clock에 비동기적으로 작동하는 ALU입니다.
 
 ![image](https://user-images.githubusercontent.com/49228032/138983726-91a1f4f1-e35c-41ac-9b9d-d8a3e417b6b7.png)
-![image](https://user-images.githubusercontent.com/49228032/138986310-878c76c7-fa03-40ef-a831-f9fd8d8f7dad.png)
+![image](https://user-images.githubusercontent.com/49228032/138989092-4ed4c6a8-d602-4b16-9bb0-fd291163f64f.png)
 
 각연산을 결정하는것은 3비트로 된 OP코드이다. 일반적으로 OP코드는 다음과 같습니다.
 
 ![image](https://user-images.githubusercontent.com/49228032/138986611-edfa2f09-28c5-4b16-9a6f-2d624a0630b7.png)
+![image](https://user-images.githubusercontent.com/49228032/138989499-e7b75827-8b75-468c-85f2-bcef718bbde1.png)
+
+
+위의 SLT 연산 결과 확인해 봅시다. (a_in > b_in 일 때 오버플로우가 발생하지 않은 경우)
+a_in이 b_in보다 클 경우 오버플로우가 발생하지 않으면서, result에는 0이 Zero에는 1이 출력되는 것을 볼 수 있습니다.
 
 ### Memory Register File
 Memory는 address를 이용해 특정 번지에 데이터를 읽거나 쓰는 구조로 되어있습니다. 컴퓨터 구조에서는 일반적으로 Main Memory(DRAM)에 해당하며, 한 번 쓰여진 데이터는 전원이 꺼지기 전까지 또는 다른 데이터로 덮에 쓰여지기 전까지는 그 값을 유지합니다. Verilog로 설계할 Memory는 아래와 같은 구조를 갖고 있습니다. 32비트의 벡터가 128개로 이루어진 배열의 형태라고 생각할 수 있는데, 이렇게 각각의 벡터는 메모리 주소와 1대1 대응됩니다. 이때 메모리 주소를 9bit를 입력 받아 앞의 7bit는 128개의 라인에 접근하는데 사용되고, 하위 2bit는 byte addressing이라는 기법을 통해 여러 비트의 데이터를 바이트 단위로 접근하는 데 쓰입니다. 
 
-![image](https://user-images.githubusercontent.com/49228032/138985547-1a8e6de7-2996-4cc1-8416-345ea43382a8.png)
+![image](https://user-images.githubusercontent.com/49228032/138989648-c8cb2039-50df-44b8-bbd0-6708b8839aa2.png)
 
  **데이터를 쓰는 경우**
  
@@ -55,6 +60,6 @@ Memory는 address를 이용해 특정 번지에 데이터를 읽거나 쓰는 �
 
 이제 결과를 살펴보면 9’b0_0000_0000 과 9’b0_0000_0001은 뒤에 2개의 비트를 제외하여 주소를 찾아가므로 동일한 11111110_10010010_00111111_01010101(2)를 반환합니다. 그리고 9'b0_0000_0100를 요청했을 때 올바르게 32'b 00001111_11110000_00001111_11110000;를 반환하는 것을 알 수 있습니다. 하지만 입력하지 않은 메모리 주소인 9'b0_0000_1100를 요청하면 xxx를 반환합니다. 따라서 메모리가 올바르게 동작하는 것을 확인할 수 있습니다.
 
-
+### 32bit MIPS
 
 
