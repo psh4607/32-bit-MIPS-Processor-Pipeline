@@ -77,6 +77,10 @@ Result의 시뮬레이션 결과값은 IF, ID, 이후 2사이클 뒤에 EXE를 �
 ### MIPS (with Hazard detection unit, Forwarding unit)
 이 MIPS 파일은 앞서 설계한 파이프라인 기반 MIPS 프로세서에 Hazard detection Unit과 이를 Control하기 위한 Fowarding unit을 추가한 Verilog 파일입니다. Hazard를 관리하고 branch의 flush까지 관리해주는 MIPS 프로세서입니다. 구조는 다음 그림과 같습니다.   
 
+![image](https://user-images.githubusercontent.com/49228032/138997950-b291798b-d085-4596-b368-9bba11cfb4c5.png)
+
+
+
 ### ALU
 ALU란 Arithmetic Logic Unit의 줄임말로 프로세서의 산술연산을 수행하는 모듈입니다. CPU의 일부로 명령어 내에 있는 연산자들에 대해 논리동작을 담당하는 중요한 모듈입니다. ALU는 연산 결과 Result 값이 0일 때 1을 출력해야하며, 아닐 때는 0을 출력해야합니다. ADD연산은 비트를 더하여 올림이 발생하면 Carrry out을 1로하여 덧셈의 결과를 출력합니다. SUB은 b의 입력에 Not 게이트를 통과시켜 보수를 구한 후 1을 더한 2의 보수를 구하여 a의 입력과 더합니다. SLT연산은 a와 b를 비교하여 a가 b보다 작으면 1을 출력하고, 그렇지 않으면 0을 출력합니다. 실제로 구현하기 위하여
 a입력과 b입력의 차를 구하여 결과가 양수이면 0을 결과가 음수이면 0을 출력하도록 하였습니다. 32bit ALU에서 SLT연산중 overflow가 발생하면 x bit(0과 1이 아님)를 결과로 출력하였습니다. 실제로는 overflow가 발생하면 overflow의 output 포트에 1, 그렇지 않은경우 0을 출력해야합니다. 이 ALU는 MIPS에서 사용된 ALU와는 다르게 Clock에 비동기적으로 작동하는 ALU입니다.
